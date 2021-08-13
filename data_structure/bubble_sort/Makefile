@@ -1,6 +1,6 @@
 PHONY = all clean
 
-TARGET = bubble_sort
+TARGET = a.out
 SRCS = main.cpp bubble_sort.cpp ../data_buffer.cpp 
 
 all: $(TARGET)
