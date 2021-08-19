@@ -1,11 +1,11 @@
-#include "quick_sort.hpp"
 #include "../data_buffer.hpp"
+#include "selection_sort.hpp"
 
 int main()
 {
     DataBuffer dataBuffer;
 
-/*     dataBuffer.PushBack(5);
+    dataBuffer.PushBack(5);
     dataBuffer.PushBack(8);
     dataBuffer.PushBack(1);
     dataBuffer.PushBack(4);
@@ -15,14 +15,11 @@ int main()
     dataBuffer.PushBack(8);
     dataBuffer.PushBack(2);
     dataBuffer.PushBack(7);
- */    
-    dataBuffer.PushBack(0);
-    dataBuffer.PushBack(150);
-    dataBuffer.PushBack(0);
-    dataBuffer.PushBack(120);
     dataBuffer.Print();
 
-    quick_sort::Sort(&dataBuffer);
+    selection_sort::SortAscending(&dataBuffer);
+    dataBuffer.Print();
+    selection_sort::SortDescending(&dataBuffer);
     dataBuffer.Print();
 
     return 0;

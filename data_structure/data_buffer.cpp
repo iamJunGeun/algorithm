@@ -5,6 +5,20 @@
 
 using namespace std;
 
+void DataBuffer::Swap(const int i, const int j)
+{
+    assert(0 <= i && i < mLength);
+    assert(0 <= j && j < mLength);
+    
+    if (i != j) {
+        int temp;
+
+        temp = mDatas[i];
+        mDatas[i] = mDatas[j];
+        mDatas[j] = temp;
+    }
+}
+
 bool DataBuffer::isFull()
 {
     return (mLength == mCapacity);

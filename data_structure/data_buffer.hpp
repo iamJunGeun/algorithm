@@ -3,6 +3,7 @@
 
 class DataBuffer {
 public:
+    void Swap(const int i, const int j);
     void PushBack(const int num);
     int operator[](const int index);
     void Replace(const int index, const int num);

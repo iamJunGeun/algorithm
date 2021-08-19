@@ -12,11 +12,11 @@ static void doSortRecursive(DataBuffer& dataBuffer, const int startIndex, const 
     int temp;
 
     while (true) {
-        while (left <= right && dataBuffer[left] <= dataBuffer[pivot]) {
+        while (left <= right && dataBuffer[left] >= dataBuffer[pivot]) {
             ++left;
         }
 
-        while (right >= left && dataBuffer[right] >= dataBuffer[pivot]) {
+        while (right >= left && dataBuffer[right] <= dataBuffer[pivot]) {
             --right;
         }
 
